@@ -6,12 +6,19 @@ body {
     justify-content: center;
 }
 
-.screen-box {
-    background-color: green;
+.screen-box, .option-box {
+    background-color: rgb(77, 44, 9);
     margin: 5px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen-box {
     height: 500px;
     width: 75vw;
-    
 }
 
 .options-container {
@@ -19,8 +26,10 @@ body {
 }
 
 .option-box {
-    background-color: green;
-    margin: 5px;
     height: 200px;
     width: 20vw;
+}
+
+.option-box:hover {
+    background-color: rgb(97, 57, 14);
 }
