@@ -33,3 +33,14 @@ body {
 .option-box:hover {
     background-color: rgb(97, 57, 14);
 }
+
+.chalice-img {
+    height: 10%;
+    width:10%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
