@@ -1,3 +1,7 @@
+// todo
+// 1. polish styling and layout
+// 2. set up better ways to access story data and develop the story without getting overwhelmed
+
 class GameStage {
     constructor(storyObject) {
         this.text = storyObject.body;
