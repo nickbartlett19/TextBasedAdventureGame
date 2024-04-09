@@ -18,7 +18,12 @@ body {
 
 .screen-box {
     height: 500px;
+    flex-basis: 900px;
     flex-grow: 5;
+}
+
+.screen-text {
+    padding: 25px;
 }
 
 .screen-box-side {
@@ -37,7 +42,7 @@ body {
 
 .option-box {
     height: 200px;
-    width: 20vw;
+    width: 300px;
 }
 
 .option-box:hover {
@@ -59,4 +64,18 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 900px) {
+    .options-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .option-box {
+        height: 100px;
+        width: 50vw;
+    }
 }
