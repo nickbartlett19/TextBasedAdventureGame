@@ -12,10 +12,11 @@ class GameStage {
 
 // load HTML elements
 const screenBox = document.querySelector(".screen-box");
+const screenText = document.querySelector(".screen-text");
 const optionBoxes = Array.prototype.slice.call(document.querySelectorAll(".option-box"));
 
-function updateGameDisplay(gameStage, screenBox, optionBoxes) {
-    screenBox.innerText = gameStage.text;
+function updateGameDisplay(gameStage, screenText, optionBoxes) {
+    screenText.innerText = gameStage.text;
 
     optionBoxes[0].innerText = gameStage.option1.body;
     optionBoxes[1].innerText = gameStage.option2.body;
@@ -27,32 +28,20 @@ function updateGameDisplay(gameStage, screenBox, optionBoxes) {
 
 }
 
-
-
 function gameStep(option) {
-    // console.log(option.data)
     let storyData = option.data.ptr;
+
     if (storyData === undefined) {
         return;
     }
-    // console.log(storyData);
-    currGameStage = new GameStage(storyData)
-    updateGameDisplay(currGameStage, screenBox, optionBoxes);
 
+    let currGameStage = new GameStage(storyData)
+    updateGameDisplay(currGameStage, screenText, optionBoxes);
 }
 
 const firstGameStage = new GameStage(s001);
-updateGameDisplay(firstGameStage, screenBox, optionBoxes);
+updateGameDisplay(firstGameStage, screenText, optionBoxes);
 
 optionBoxes.forEach((box) => {
     box.addEventListener(('click'), (e) => gameStep(box))
 });
-
-
-// ========================================================
-
-// idea i had yesterday
-
-// option button has event listener with gameStep() function
-// gameStep loads the gameStage corresponding to the pointer in that option
-// update display accordingly
